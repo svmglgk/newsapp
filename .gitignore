@@ -7,3 +7,5 @@
 #img
 *.png
 *.jpg
+#API
+*.env
