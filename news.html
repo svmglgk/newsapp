@@ -1,0 +1,233 @@
+<html>
+<head>
+<link rel="stylesheet" href="stildiv.css" type="text/css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+
+
+</head>
+
+
+
+<body>
+<div id="ust"></div>
+<div id="ustmenu">
+<h1 class="yazı"> Dünyadan coronavirüs Haberleri</h1>
+</div>
+
+
+
+<i class="fas fa-home"></i> 
+
+
+<div id="icerik">
+
+
+<div id="divleaflet">
+
+
+
+</div>
+
+
+
+</div>
+
+<script>
+
+
+
+var myIcon = L.icon({
+    iconUrl: 'picture/news.png',
+    iconSize: [40, 40],
+  
+  
+});
+
+
+var merkez=L.latLng(38.706632, 35.531087);
+var mymap = L.map('divleaflet').setView([38.520328, 13.669165], 2,5);
+
+const marker=L.marker([53.367684, 21.160943],{icon: myIcon}).addTo(mymap);
+let template=
+`<h3>
+Polonya’da corona aşısına ilgi azalıyor
+</h3>
+<a href='https://www.sozcu.com.tr/2021/dunya/polonyada-corona-asisina-ilgi-azaliyor-6553464/' > <img style="text-align:center" width="100%" height ="100%" src="picture/polonya.jpg"/> </a>
+
+
+`
+marker.bindPopup(template);
+
+
+var news=L.marker([-0.123624, 113.953344],{icon: myIcon}).addTo(mymap);
+
+let sablon=
+`
+<h3>Covid-19 Deaths Rise Sharply in Indonesia</h3>
+<a href='https://www.theguardian.com/world/2021/jul/26/indonesia-loosens-covid-restrictions-despite-record-deaths' > <img style="text-align:center" width="100%" height ="100%" src="picture/indonesia.jpg"/> </a>
+
+`
+news.bindPopup(sablon);
+
+
+
+const mar=L.marker([26.006053, 45.012649],{icon: myIcon}).addTo(mymap);
+
+let temp=
+`
+<h3>Suudi Arabistan,Umre ziyaretleri için COVID-19 aşısı olma şartı getirdi</h3>
+<a href='https://www.cnnturk.com/dunya/suudi-arabistan-10-agustosta-baslayacak-umre-ziyaretleri-icin-covid-19-asisi-olma-sarti-getirdi' > <img style="text-align:center" width="100%" height ="100%" src="picture/kabe.jpg"/> </a>
+
+`
+
+mar.bindPopup(temp);
+
+
+
+
+const mr=L.marker([42.325583, -2.387454],{icon: myIcon}).addTo(mymap);
+
+let templ=
+`
+<h3>İspanya'da coronavirüs önlemleri geri geliyor</h3>
+<a href='https://www.trthaber.com/haber/dunya/ispanyada-koronavirus-onlemleri-geri-geliyor-595455.html' > <img style="text-align:center" width="100%" height ="100%" src="picture/spain.jpg"/> </a>
+
+`
+
+mr.bindPopup(templ);
+
+
+
+
+const mrk=L.marker([43.101522, -92.899879],{icon: myIcon}).addTo(mymap);
+
+let te=
+`
+<h3>ABD'de uluslararası seyahat kısıtlamaları sürecek </h3>
+<a href='https://tr.euronews.com/2021/07/27/abd-de-delta-varyant-endisesi-artt-uluslararas-seyahat-k-s-tlamalar-surecek' > <img style="text-align:center" width="100%" height ="100%" src="picture/usa.jpg"/> </a>
+
+`
+
+mrk.bindPopup(te);
+
+
+
+const mrkr=L.marker([64.709819, 96.725309],{icon: myIcon}).addTo(mymap);
+
+let tmplt=
+`
+<h3> İlk kez Brezilya'da görülen Covid-19'un gamma varyantına Rusya'da da rastlandı</h3>
+<a href='https://www.cnnturk.com/dunya/ilk-kez-brezilyada-gorulen-covid-19un-gamma-varyantina-rusyada-da-rastlandi' > <img style="text-align:center" width="100%" height ="100%" src="picture/russia.jpg"/> </a>
+
+`
+
+mrkr.bindPopup(tmplt);
+
+
+const sym=L.marker([63.054689, -107.822561],{icon: myIcon}).addTo(mymap);
+
+let tm=
+`
+<h3>Canada Has Enough COVID-19 Vaccine For All Eligible Residents</h3>
+<a href='https://www.919thebend.ca/2021/07/27/canada-has-enough-covid-19-vaccine-for-all-eligible-residents/' > <img style="text-align:center" width="100%" height ="100%" src="picture/canada.jpg"/> </a>
+
+`
+
+sym.bindPopup(tm);
+
+
+
+const sembol=L.marker([-3.900366, -52.112208],{icon: myIcon}).addTo(mymap);
+
+let s=
+`
+<h3>Latin Amerika'da pandeminin merkez üssü hala Brezilya</h3>
+<a href='https://www.trthaber.com/haber/dunya/latin-amerikada-pandeminin-merkez-ussu-hala-brezilya-597523.html' > <img style="text-align:center" width="100%" height ="100%" src="picture/brazil.jpg"/> </a>
+
+`
+
+sembol.bindPopup(s);
+
+
+const symi=L.marker([42.960544, 13.391523],{icon: myIcon}).addTo(mymap);
+
+let it=
+`
+<h3>İtalya’dan Covid-19 raporu:  Ölenlerin yüzde 99’u tam aşı olmadı</h3>
+<a href='https://www.ntv.com.tr/dunya/italyadan-covid-19-raporu-olenlerin-yuzde-99u-tam-asi-olmadi,jNH3bGHzTEyPq3w5sGjdxQ' > <img style="text-align:center" width="100%" height ="100%" src="picture/italy.jpg"/> </a>
+
+`
+
+symi.bindPopup(it);
+
+
+
+const symbolturkey=L.marker([41.309952, 35.870407],{icon: myIcon}).addTo(mymap);
+
+let temptur=
+`
+<h3>Türkiye'de aşı zorunlu olacak mı?</h3>
+<a href='https://www.trthaber.com/haber/gundem/turkiyede-asi-zorunlu-olacak-mi-598145.html' > <img style="text-align:center" width="100%" height ="100%" src="picture/turkey.jpg"/> </a>
+
+`
+
+symbolturkey.bindPopup(temptur);
+
+
+const symbolchina=L.marker([41.030178, 107.340529],{icon: myIcon}).addTo(mymap);
+
+let tempch=
+`
+<h3>Çin'de Covid-19: Ocak ayından bu yana en yüksek vaka sayısı kaydedildi</h3>
+<a href='https://tr.euronews.com/2021/07/26/cin-de-covid-19-ocak-ay-ndan-bu-yana-en-yuksek-vaka-say-s-kaydedildi' > <img style="text-align:center" width="100%" height ="100%" src="picture/cin.jpg"/> </a>
+
+`
+
+symbolchina.bindPopup(tempch);
+
+var polygon=L.polygon
+
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 20,
+    id: 'mapbox/streets-v11',
+    tileSize: 512,
+    zoomOffset: -1,
+    accessToken: 'pk.eyJ1Ijoic3ZtZ2xnayIsImEiOiJja2o3cTh2bHI0cnNkMnJuNGpvYzhicTN3In0.iRf7Z1JO7hlsb1iSLFM59g'
+}).addTo(mymap);
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>
